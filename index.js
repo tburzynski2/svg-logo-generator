@@ -1,5 +1,9 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
+const Circle = import("./lib/circle.js");
+const Triangle = import("./lib/triangle.js");
+const Square = import("./lib/square.js");
+
+import inquirer from "inquirer";
+import fs from "fs";
 
 inquirer
   .prompt([
@@ -23,7 +27,7 @@ inquirer
     {
       type: "list",
       message: "Choose logo shape:",
-      name: "contact",
+      name: "shape",
       choices: ["circle", "triangle", "square"],
     },
     {
@@ -33,6 +37,8 @@ inquirer
     },
   ])
   .then((data) => {
+    console.log(data);
+
     const filename = "logo.svg";
     const shapeType = data.shape;
 
