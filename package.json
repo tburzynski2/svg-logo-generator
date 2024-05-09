@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Command line Node application that takes user input for up to three letters, a shape, and a color and outputs a simple .svg logo file.",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "example": "examples",
     "lib": "lib"

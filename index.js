@@ -1,6 +1,6 @@
-const Circle = import("./lib/circle.js");
-const Triangle = import("./lib/triangle.js");
-const Square = import("./lib/square.js");
+import Circle from "./lib/circle.js";
+import Triangle from "./lib/triangle.js";
+import Square from "./lib/square.js";
 
 import inquirer from "inquirer";
 import fs from "fs";
