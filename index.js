@@ -37,23 +37,22 @@ inquirer
     },
   ])
   .then((data) => {
-    console.log(data);
-
     const filename = "logo.svg";
     const shapeType = data.shape;
+    let shape;
 
     if (shapeType === "circle") {
-      const shape = new Circle();
+      shape = new Circle();
     } else if (shapeType === "triangle") {
-      const shape = new Triangle();
+      shape = new Triangle();
     } else {
-      const shape = new Square();
+      shape = new Square();
     }
 
     shape.setColor(data.shapeColor);
     shape.setText(data.text, data.textColor);
 
-    fs.writeFile(filename, JSON.stringify(shape.render()), (err) =>
-      err ? console.log(err) : console.log("Generated logo.svg")
+    fs.writeFile(filename, shape.render(), (err) =>
+      err ? console.error(err) : console.log("Generated logo.svg")
     );
   });
