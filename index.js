@@ -5,6 +5,11 @@ import Square from "./lib/square.js";
 import inquirer from "inquirer";
 import fs from "fs";
 
+import { fileURLToPath } from "url";
+import path from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 inquirer
   .prompt([
     {
@@ -51,8 +56,9 @@ inquirer
 
     shape.setColor(data.shapeColor);
     shape.setText(data.text, data.textColor);
+    let exportPath = path.join(__dirname, "examples", filename);
 
-    fs.writeFile(filename, shape.render(), (err) =>
+    fs.writeFile(exportPath, shape.render(), (err) =>
       err ? console.error(err) : console.log("Generated logo.svg")
     );
   });

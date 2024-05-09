@@ -1,4 +1,0 @@
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="150" cy="100" r="100" style="fill:red;" />
-      <text x="150" y="100" dominant-baseline="middle" text-anchor="middle" fill="blue" style="font-size: 40px; font-weight: bold; font-family: sans-serif">WWW</text>
-    </svg>
