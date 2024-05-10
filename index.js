@@ -54,7 +54,7 @@ inquirer
       shape = new Square();
     }
 
-    shape.setColor(data.shapeColor);
+    shape.setShapeColor(data.shapeColor);
     shape.setText(data.text, data.textColor);
     let exportPath = path.join(__dirname, "examples", filename);
 
