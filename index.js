@@ -1,14 +1,11 @@
-import Circle from "./lib/circle.js";
-import Triangle from "./lib/triangle.js";
-import Square from "./lib/square.js";
+const Circle = require("./lib/circle.js");
+const Triangle = require("./lib/triangle.js");
+const Square = require("./lib/square.js");
 
-import inquirer from "inquirer";
-import fs from "fs";
+const inquirer = require("inquirer");
+const fs = require("fs");
 
-import { fileURLToPath } from "url";
-import path from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const path = require("path");
 
 inquirer
   .prompt([
